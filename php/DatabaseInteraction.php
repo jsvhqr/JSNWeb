@@ -32,11 +32,21 @@ class DatabaseInteraction {
 			if (! $result) {
 				return FALSE;
 			} else {
+				session_start ();
+				$_SESSION ['username'] = $username;
+				$_SESSION ['password'] = $password;
+				$_SESSION['loggedin'] = TRUE;
+				$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
+				ini_set ( 'session.gc_maxlifetime', 60 * 60 * 24 );
 				return TRUE;
 			}
 		} else {
 			return FALSE;
 		}
+	}
+	function logout() {
+		$_SESSION = array ();
+		session_destroy ();
 	}
 }
 ?>

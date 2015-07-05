@@ -1,1 +1,34 @@
 @CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#header {
+	background-color: #CC3300;
+}
+
+#mainPageHeading {
+	color: black;
+	font-family: "Courier New", monospace;
+	font-style: italic;
+	text-align: center;
+}
+
+ul.Nav {
+	list-style-type: none;
+	text-align: center;
+}
+
+ul.Nav  *{
+	display:inline;
+	text-decoration: none;
+	padding: 5px 10px;
+	color: white;
+	background-color: black;	
+	margin-left: 5px;
+	margin-right: 5px;
+}
+

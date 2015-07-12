@@ -18,17 +18,47 @@
 }
 
 ul.Nav {
-	list-style-type: none;
 	text-align: center;
 }
 
-ul.Nav  *{
-	display:inline;
+ul.Nav>li {
+	display: inline;
 	text-decoration: none;
 	padding: 5px 10px;
 	color: white;
-	background-color: black;	
+	background-color: black;
 	margin-left: 5px;
 	margin-right: 5px;
 }
 
+ul.Nav>li>a {
+	display: inline;
+	text-decoration: none;
+	padding: 5px 10px;
+	color: white;
+	background-color: black;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#loginAndRegisterContainer{
+	text-align:center;
+}
+
+#loginForm {
+	background-color: black;
+	padding: 1%;
+	display: none;
+		
+}
+
+#registerForm {
+	background-color: black;
+	padding: 1%;
+	display: none;
+		
+}
+
+form.dropDownForm{
+	display:inline;
+}

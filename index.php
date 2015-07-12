@@ -13,7 +13,7 @@
 		</div>
 		
 		<?php
-		session_start();
+		session_start ();
 		if (isset ( $_SESSION ['loggedin'] ) && $_SESSION ['loggedin'] == TRUE && $_SESSION ['ip'] == $_SERVER ['REMOTE_ADDR']) {
 			?>
 		<div id="loggedInNav" class="Nav">
@@ -27,31 +27,35 @@
 		<div id="loggedOutNav " class="Nav">
 			<ul class="Nav">
 				<li><a href="index.php">Home</a></li>
-				<li><label onclick="changeLogin()">Login</label></li>
-				<li><label onclick="changeRegister()">Register</label></li>
+				<li><label onclick="changeLogin()">Login</label>
+					<div id="loginForm" class="dropDownForm">
+						<form class="dropDownForm" action="php/login.php" method="post">
+							<input type="text" placeholder="Username" name="username"><br> <input
+								type="password" placeholder="Password" name="password"><br> <input
+								type="submit" value="login">
+						</form>
+					</div></li>
+				<li><label onclick="changeRegister()">Register</label>
+					<div id="registerForm" class="dropDownForm">
+						<form class="dropDownForm" action="php/register.php" method="post">
+							<input type="text" placeholder="Enter Username" name="username"><br>
+							<input type="password" placeholder="Enter PassPhrase"
+								name="password"><br> <input type="text"
+								placeholder="Enter email" name="email"><br> <input type="submit"
+								value="signup">
+						</form>
+					</div></li>
 			</ul>
 		</div>
 		<?php }?>
 	</div>
-	<div id="loginAndRegisterContainer">
-		<div id="loginForm" class="dropDownForm">
-			<form class="dropDownForm" action="php/login.php" method="post">
-				<input type="text" placeholder="Username" name="username"><br> 
-				<input type="password"placeholder="Password" name ="password"><br> 
-				<input type="submit" value="login">
-			</form>
-		</div>
-		<div id="registerForm" class="dropDownForm">
-			<form class="dropDownForm" action="php/register.php" method="post">
-				<input type="text" placeholder="Enter Username" name="username"><br>
-				<input type="password" placeholder="Enter PassPhrase" name="password"><br>
-				<input type="text" placeholder="Enter email" name="email"><br>
-				<input type="submit" value="signup">
-			</form>
-		</div>
-	</div>
 
-	<div id="content"></div>
+
+	<div id="content">
+		<?php if (isset ( $_SESSION ['loggedin'] ) && $_SESSION ['loggedin'] == TRUE && $_SESSION ['ip'] == $_SERVER ['REMOTE_ADDR']) { ?>
+		<?php }else{?>
+		<?php }?>
+	</div>
 
 
 </body>

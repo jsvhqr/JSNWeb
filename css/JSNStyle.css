@@ -8,6 +8,9 @@
 
 #header {
 	background-color: #CC3300;
+	background-attachment: fixed;
+	position:fixed;
+	width: 100%;
 }
 
 #mainPageHeading {
@@ -19,10 +22,12 @@
 
 ul.Nav {
 	text-align: center;
+	position:fixed;
+	width:100%;
 }
 
 ul.Nav>li {
-	display: inline;
+	display: inline-table;
 	text-decoration: none;
 	padding: 5px 10px;
 	color: white;
@@ -32,33 +37,32 @@ ul.Nav>li {
 }
 
 ul.Nav>li>a {
-	display: inline;
 	text-decoration: none;
-	padding: 5px 10px;
 	color: white;
-	background-color: black;
-	margin-left: 5px;
-	margin-right: 5px;
-}
-
-#loginAndRegisterContainer{
-	text-align:center;
+	display: inline:block;
 }
 
 #loginForm {
 	background-color: black;
 	padding: 1%;
 	display: none;
-		
 }
 
 #registerForm {
 	background-color: black;
 	padding: 1%;
 	display: none;
-		
 }
 
-form.dropDownForm{
-	display:inline;
+form.dropDownForm {
+	display: inline;
+}
+
+#content {
+	background-image: url("http://localhost/JSNWeb/images/content.jpg");
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align:center;
+	height: 800px;
 }

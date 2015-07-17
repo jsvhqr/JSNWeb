@@ -6,7 +6,7 @@
 <script src="javascript/functions.js" type="text/javascript"></script>
 <title>JSN HOME</title>
 </head>
-<body>
+<body onLoad="loadCalender()">
 	<div id="header">
 		<div id="mainPageHeading">
 			<h1>JSN under construction</h1>
@@ -53,7 +53,19 @@
 
 	<div id="content">
 		<?php if (isset ( $_SESSION ['loggedin'] ) && $_SESSION ['loggedin'] == TRUE && $_SESSION ['ip'] == $_SERVER ['REMOTE_ADDR']) { ?>
+		<div id="CalenderContainer">
+			<table id="CalenderTable">
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			</table>
+		</div>
 		<?php }else{?>
+		<h2 id="loginLabel">Please Register or Login</h2>
 		<?php }?>
 	</div>
 

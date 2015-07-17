@@ -22,7 +22,7 @@
 
 ul.Nav {
 	text-align: center;
-	position:fixed;
+	position:absolute;
 	width:100%;
 }
 
@@ -39,7 +39,7 @@ ul.Nav>li {
 ul.Nav>li>a {
 	text-decoration: none;
 	color: white;
-	display: inline:block;
+	display: inline-block;
 }
 
 #loginForm {
@@ -63,6 +63,39 @@ form.dropDownForm {
 	background-size: auto;
 	background-position: center;
 	background-repeat: no-repeat;
-	text-align:center;
-	height: 800px;
+	
+  	height: 800px;
+  	width: 1600px;
+  	vertical-align: middle;
+  	text-align: center;
+  	display:table-cell;
+	
+}
+
+#loginLabel{
+	color: black;
+	font-family: Zapf Chancery, cursive;
+	
+	display: inline-block;
+  	width: 250px; height: 100px;
+}
+
+#CalenderContainer{
+	
+	display: inline-block;
+  	width: 600px; height: 400px;
+	
+}
+
+table{
+	margin: 0 auto;
+	width: 600px; height: 400px;
+}
+
+tr{
+	color: black;
+	background-image: url("http://localhost/JSNWeb/images/road.jpg");
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
 }
